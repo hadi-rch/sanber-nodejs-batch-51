@@ -1,6 +1,6 @@
 Data Peserta Bootcamp Digital Skill - NodeJS Backend Development
 1. Nama: Hadi
-2. Email: hadirch@gmail.com
+2. Email: hadirich@gmail.com
 3. Sistem Operasi yang digunakan: Windows 11
-4. Akun Gitlab/Github: hadirch
-5. Akun Telegram: Hadi
+4. Akun Gitlab/Github: https://gitlab.com/hadirch
+5. Akun Telegram: t.me/Adiy666
