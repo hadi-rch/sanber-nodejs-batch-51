@@ -25,7 +25,7 @@ switch (command) {
             [kelasArgs[0]] : kelasArgs[1],
             [scoreArgs[0]] : Number(scoreArgs[1])
         }
-        console.log(objArgs)
+        console.log(checkScore(objArgs))
     break;
     default : console.log("Anda salah memasukan perintah dist")
   }
