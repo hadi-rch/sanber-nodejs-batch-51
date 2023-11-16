@@ -1,0 +1,1 @@
+[{"name":"Bondra","password":"123456","role":"admin","isLogin":true},{"name":"Alim","password":"123456","role":"trainner","isLogin":false},{"name":"Iqbal","password":"123456","role":"trainer","isLogin":true,"students":[{"name":"Regy"},{"name":"Regsy"},{"name":"Regsyw"},{"name":"egsyw"},{"name":"egsaw"}]}]
