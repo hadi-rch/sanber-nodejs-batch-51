@@ -1,0 +1,39 @@
+1.buat Database
+    CREATE DATABASE library;
+
+2.buat Table
+    CREATE TABLE users (
+        id INT AUTO_INCREMENT PRIMARY KEY, 
+        name VARCHAR(255), 
+        email VARCHAR(255),
+        password VARCHAR(255));
+    CREATE TABLE categories (
+        id INT AUTO_INCREMENT PRIMARY KEY, 
+        name VARCHAR(255));
+    CREATE TABLE books (
+        id INT AUTO_INCREMENT PRIMARY KEY, 
+        title VARCHAR(255), 
+        summary TEXT,
+        stock INT, 
+        category_id INT REFERENCES categories(id));
+
+3.Memasukan data kedalam table yang sudah ada
+    INSERT INTO users (name, email, password) VALUES 
+        ("John Doe", "john@doe.com", "john123"),
+        ("Jane Doe", "jane@doe.com", "jenita123");
+    INSERT INTO categories (name) VALUES 
+        ("Novel"),("Manga"),("Comic"),("History"),("IT");
+    INSERT INTO books (title, summary, stock, category_id) VALUES 
+        ("One piece", "The series focuses on Monkey D Luffy, a young man made of rubber", 50, 2),
+        ("Laskar Pelangi",	"Belitung is known for its richness in tin, making it one of Indonesia's richest islands", 25,1), 
+        ("Your Name",	"Mitsuha Miyamizu, a high school girl living in the fictional town of Itomori in Gifu Prefecture's", 15, 2);
+
+4.Mengambil Data dari Database
+    a. SELECT id, name, email FROM users;
+    b. SELECT * FROM books WHERE title LIKE '%one%';
+    c. SELECT books.title, books.summary, books.stock,books.category_id, categories.name as 'category' FROM books JOIN categories ON books.id = categories.id;
+
+5. UPDATE books SET stock = 30 WHERE title LIKE '%One Piece%';
+
+
+
