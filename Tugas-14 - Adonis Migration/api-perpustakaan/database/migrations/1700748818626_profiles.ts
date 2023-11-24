@@ -11,10 +11,10 @@ export default class extends BaseSchema {
         .unsigned()
         .references('users.id')
         .onDelete('CASCADE') // delete profile when user is deleted
+        .onUpdate('CASCADE')
       table.text('bio').notNullable()
       table.text('alamat').notNullable()
-
-          table.timestamps(true, true)
+      table.timestamps(true, true)
     })
   }
 
