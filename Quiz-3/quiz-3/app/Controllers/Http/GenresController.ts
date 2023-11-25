@@ -30,15 +30,39 @@ export default class GenresController {
             })
     }
     public async show({response, params}: HttpContextContract) {
-        const category = await Database
-            .from('genres')
-            .where('id',params.id)
-            .firstOrFail() 
-
-        return response.ok({
-            message: "Tampil Detail Data Genres",
-            data: category
-        })
+        let id = params?.id;
+        console.log(id);
+        try {
+            const showGenre = await Database.query()
+                .from("genres")
+                .where({ id })
+                .first();
+            if (!showGenre) {
+                throw new Error(`Data ${id} Tidak tersedia`);
+            }
+            const showGame = await Database.query()
+                .from("games")
+                .where("genres_id", showGenre.id);
+            const newReponse = {
+                id: showGenre.id,
+                name: showGenre.name,
+                games: showGame.map((game) => ({
+                id: game.id,
+                title: game.title,
+                gameplay: game.gameplay,
+                release_date: game.release_date,
+                })),
+            };
+            return response.ok({
+                message: `Berhasil Query Genre Id ${id}`,
+                data: newReponse,
+            });
+        } catch (err) {
+            return response.badRequest({
+                message: `Gagal Get Genre Id ${id}`,
+                error: `${err}`,
+        });
+        }
     }
     public async update({response, params, request}: HttpContextContract) {
         const  updateGenresSchema = schema.create({
