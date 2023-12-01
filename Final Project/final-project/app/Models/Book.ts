@@ -1,7 +1,8 @@
 import { DateTime } from 'luxon'
-import { BaseModel, BelongsTo, ManyToMany, belongsTo, column, manyToMany } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, BelongsTo, HasMany, ManyToMany, belongsTo, column, hasMany, manyToMany } from '@ioc:Adonis/Lucid/Orm'
 import Category from './Category'
 import User from './User'
+import Borrow from './Borrow'
 
 export default class Book extends BaseModel {
   public static table = 'books'
@@ -30,11 +31,22 @@ export default class Book extends BaseModel {
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   public updatedAt: DateTime
 
-  @belongsTo(() => Category)
+  @belongsTo(() => Category, {
+    foreignKey: "kategori_id"
+  })
   public category: BelongsTo<typeof Category>
 
   @manyToMany(() => User, {
-    pivotTable: 'borrows'
+    localKey: "id",
+    pivotForeignKey: "buku_id",
+    relatedKey: "id",
+    pivotRelatedForeignKey: "user_id",
+    pivotTable: "borrows",
   })
-  public users: ManyToMany<typeof User>
+  public borrows: ManyToMany<typeof User>;
+
+  @hasMany(() => Borrow, {
+    foreignKey: "buku_id",
+  })
+  public borrow: HasMany<typeof Borrow>;
 }
