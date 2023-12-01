@@ -9,8 +9,8 @@ export default class extends BaseSchema {
       table.integer('user_id').unsigned().references('users.id').onDelete('CASCADE').onUpdate('CASCADE')
       table.integer('buku_id').unsigned().references('books.id').onDelete('CASCADE').onUpdate('CASCADE')
       table.unique(['user_id', 'buku_id '])
-      table.dateTime('tanggal_pinjam')
-      table.dateTime('tanggal_kembali')
+      table.date('tanggal_pinjam')
+      table.date('tanggal_kembali')
       table.timestamps(true, true)
     })
   }
