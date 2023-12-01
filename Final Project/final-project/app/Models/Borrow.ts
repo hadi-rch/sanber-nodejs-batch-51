@@ -1,7 +1,11 @@
 import { DateTime } from 'luxon'
 import { BaseModel, 
+  BelongsTo, 
+  belongsTo, 
   // BelongsTo, belongsTo, 
   column } from '@ioc:Adonis/Lucid/Orm'
+import Book from './Book'
+import User from './User'
 // import User from './User'
 
 export default class Borrow extends BaseModel {
@@ -26,6 +30,14 @@ export default class Borrow extends BaseModel {
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   public updatedAt: DateTime
 
-  // @belongsTo(() => User)
-  // public user: BelongsTo<typeof User>
+  @belongsTo(() => Book, {
+    foreignKey: "buku_id",
+  })
+  public buku: BelongsTo<typeof Book>;
+
+  @belongsTo(() => User, {
+    foreignKey: "user_id",
+  })
+  public user: BelongsTo<typeof User>;
+
 }
