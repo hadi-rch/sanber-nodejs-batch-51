@@ -24,10 +24,8 @@ export default class BorrowValidator {
    *    ```
    */
   public schema = schema.create({
-    user_id: schema.number(),
-    buku_id: schema.number(),
     tanggal_pinjam: schema.string(),
-    tanggal_kembali: schema.string.optional()
+    tanggal_kembali: schema.string()
   })
 
   /**
