@@ -12,5 +12,8 @@ Route
     Route.resource('category', 'CategoriesController').apiOnly().middleware({'*': ['auth']})
     Route.resource('book', 'BooksController').apiOnly().middleware({'*': ['auth']})
     Route.resource('borrow', 'BorrowsController').apiOnly().middleware({'store':['auth']})
+    Route.post('/buku/:id/peminjaman', 'BorrowsController.store').middleware(['auth'])
+    Route.post('/peminjaman/:id', 'BorrowsController.index').middleware(['auth'])
+
   })
   .prefix('/api/v1/')
