@@ -20,6 +20,9 @@ export default class User extends BaseModel {
   
   @column()
   public role: string | undefined
+
+  @column()
+  public isVerified: boolean
   
   @column()
   public rememberMeToken?: string
