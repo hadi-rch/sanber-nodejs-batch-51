@@ -20,7 +20,7 @@ export default class CategoriesController {
               })
         }
     }
-    public async index({ response, request}: HttpContextContract) {
+    public async index({ response}: HttpContextContract) {
         try {
             const categories = await Category
             .query()
@@ -38,15 +38,10 @@ export default class CategoriesController {
 }
     public async show({response, params}: HttpContextContract) {
         try {
-            
             const categoris = await Category
             .query()
             .where('id', params.id)
-            .preload('books'
-            // , (bookQuery) => {
-            //     bookQuery.select(['id', 'judul', 'ringkasan'])
-            //   }
-              )
+            .preload('books')
             .firstOrFail()
             return response.ok({
                 message: "Tampil Detail Data Categories",
