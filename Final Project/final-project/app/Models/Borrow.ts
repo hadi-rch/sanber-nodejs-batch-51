@@ -33,7 +33,7 @@ export default class Borrow extends BaseModel {
   @belongsTo(() => Book, {
     foreignKey: "buku_id",
   })
-  public buku: BelongsTo<typeof Book>;
+  public book: BelongsTo<typeof Book>;
 
   @belongsTo(() => User, {
     foreignKey: "user_id",
