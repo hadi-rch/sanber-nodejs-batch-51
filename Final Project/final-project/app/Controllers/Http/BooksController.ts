@@ -1,11 +1,10 @@
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import {schema, rules} from '@ioc:Adonis/Core/Validator'
-import Database from '@ioc:Adonis/Lucid/Database'
 import Book from 'App/Models/Book'
 
 
 export default class BooksController {    
-    public async store({request, response, auth}: HttpContextContract) {
+    public async store({request, response}: HttpContextContract) {
         const newBooksSchema = schema.create({
             kategori_id: schema.number([rules.exists({table: 'categories',column: 'id'})]),
             judul: schema.string(),
@@ -56,14 +55,15 @@ export default class BooksController {
             );
           })
           .firstOrFail();
-        if (books === null){
-            return response.notFound({
-                message: `data dengan id ${params.id} tidak ditemukan`,
+          console.log(books, "lklo")
+        if (books.$attributes?.id !== null){
+            return response.ok({
+                message: "Tampil Detail Data Books",
+                data: books
             })
         }
-        return response.ok({
-            message: "Tampil Detail Data Books",
-            data: books
+        return response.notFound({
+            message: `data dengan id ${params.id} tidak ditemukan`,
         })
     }
     public async update({response, params, request}: HttpContextContract) {
