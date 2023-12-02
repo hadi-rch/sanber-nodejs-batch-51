@@ -7,7 +7,7 @@ export default class BorrowsController {
         try {
         const allBorrow = await Borrow
         .query()
-        .preload('buku')
+        .preload('book')
         .preload('user')
         return response.ok({
             message: "Success fetch Borrows", 
@@ -56,5 +56,22 @@ export default class BorrowsController {
             }
         }
     }
+    public async show({ response, params }: HttpContextContract) {
+        const data = await Borrow.query()
+          .where('id', params.id)
+          .preload('user')
+          .preload('book', (buku) => {
+            buku.preload('category')
+          })
+          if(data.length !== 0){
+          return response.ok({
+            message: 'Berhasil Mendapatkan data',
+            data: data,
+          })
+        }
+        return response.notFound({
+          message: 'data tidak ditemukan',
+        })
+      }
     
 }
