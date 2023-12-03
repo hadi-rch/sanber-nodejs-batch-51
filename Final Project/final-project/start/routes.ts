@@ -13,14 +13,14 @@ Route
     Route.resource('category', 'CategoriesController').apiOnly().middleware({
       'index': ['auth', 'verify'],
       'store': ['auth', 'verify', 'admin'],
-      'show': ['auth', 'verify'],
+      'show': ['auth', 'verify', 'admin'],
       'update': ['auth', 'verify', 'admin'],
       'destroy': ['auth', 'verify', 'admin'],
     })
     Route.resource('book', 'BooksController').apiOnly().middleware({
       'index': ['auth', 'verify'],
       'store': ['auth', 'verify', 'admin'],
-      'show': ['auth', 'verify'],
+      'show': ['auth', 'verify', 'admin'],
       'update': ['auth', 'verify', 'admin'],
       'destroy': ['auth', 'verify', 'admin'],
     })
