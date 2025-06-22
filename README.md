@@ -1,93 +1,103 @@
-# BDS Sanbercode NodeJS Batch 51
+# Sanbercode Bootcamp - NodeJS Batch 51
 
+Repositori ini berisi kumpulan materi, tugas, kuis, dan proyek akhir dari Bootcamp NodeJS Batch 51 di Sanbercode.
 
+## Daftar Isi
 
-## Getting started
+- [Tentang Bootcamp](#tentang-bootcamp)
+- [Materi yang Dipelajari](#materi-yang-dipelajari)
+- [Struktur Repositori](#struktur-repositori)
+- [Proyek Akhir](#proyek-akhir)
+- [Cara Menjalankan Contoh Kode](#cara-menjalankan-contoh-kode)
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Tentang Bootcamp
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+Bootcamp NodeJS Batch 51 Sanbercode adalah program pelatihan intensif yang mencakup berbagai aspek pengembangan backend menggunakan Node.js dan teknologi terkait.
 
-## Add your files
+## Materi yang Dipelajari
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+Berikut adalah topik-topik utama yang telah dipelajari selama bootcamp:
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/hadirch/bds-sanbercode-nodejs-batch-51.git
-git branch -M main
-git push -uf origin main
-```
+1.  **Dasar-dasar JavaScript & ES6:**
+    *   Variabel, tipe data, operator
+    *   Conditional (if/else, switch)
+    *   Looping (for, while, do-while)
+    *   Function (deklarasi, ekspresi, arrow function)
+    *   Array dan manipulasi array
+    *   Object dan manipulasi object
+    *   Fitur ES6 (let, const, template literals, destructuring, spread/rest operator, module)
+    *   Class dan Object-Oriented Programming (OOP) dasar
+    *   Asynchronous JavaScript (Callback, Promise, Async/Await)
 
-## Integrate with your tools
+2.  **Node.js:**
+    *   Pengenalan Node.js dan arsitekturnya
+    *   NPM (Node Package Manager)
+    *   Module system (CommonJS)
+    *   File System (fs module)
+    *   HTTP module
 
-- [ ] [Set up project integrations](https://gitlab.com/hadirch/bds-sanbercode-nodejs-batch-51/-/settings/integrations)
+3.  **SQL & Database:**
+    *   Dasar-dasar SQL (SELECT, INSERT, UPDATE, DELETE, JOIN)
+    *   Desain database dan ERD (Entity Relationship Diagram)
 
-## Collaborate with your team
+4.  **REST API dengan Express.js:**
+    *   Pengenalan Express.js framework
+    *   Routing
+    *   Middleware
+    *   Request dan Response handling
+    *   CRUD operations
+    *   Integrasi dengan database menggunakan Sequelize ORM
+    *   Konsep Model, View (opsional), Controller (MVC)
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+5.  **REST API dengan AdonisJS:**
+    *   Pengenalan AdonisJS v5 framework
+    *   Struktur proyek AdonisJS
+    *   Routing dan Controllers
+    *   Middleware
+    *   Validasi request (Validators)
+    *   Lucid ORM (Models, Migrations, Factories)
+    *   Authentication (dasar)
+    *   Error Handling
 
-## Test and Deploy
+## Struktur Repositori
 
-Use the built-in continuous integration in GitLab.
+Repositori ini diorganisir sebagai berikut:
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+*   `Materi-X/`: Berisi kode atau catatan terkait materi yang disampaikan pada pertemuan ke-X.
+    *   Contoh: `Materi-7/` (Class), `Materi-13/` (AdonisJS).
+*   `Tugas-X/`: Berisi solusi untuk tugas-tugas yang diberikan.
+    *   Contoh: `Tugas-2/` (Conditional, String), `Tugas-6 - ES6/`, `Tugas-11 - REST API Express/`, `Tugas-14 - Adonis Migration/`.
+*   `Quiz-X/`: Berisi solusi untuk kuis yang diadakan.
+    *   Contoh: `Quiz-3/` (kemungkinan besar AdonisJS).
+*   `Final Project/`: Berisi kode sumber untuk proyek akhir bootcamp.
+    *   Proyek ini tampaknya dibangun menggunakan AdonisJS.
 
-***
+## Proyek Akhir
 
-# Editing this README
+Proyek akhir merupakan aplikasi full-stack atau backend komprehensif yang mengimplementasikan sebagian besar konsep yang telah dipelajari selama bootcamp, terutama menggunakan AdonisJS. Detail lebih lanjut mengenai proyek akhir dapat ditemukan di dalam direktori `Final Project/final-project/README.md` (jika ada) atau dengan menjelajahi kode sumbernya.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+## Cara Menjalankan Contoh Kode
 
-## Suggestions for a good README
+Instruksi untuk menjalankan kode dapat bervariasi tergantung pada proyek atau tugas tertentu.
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+**Untuk Proyek Express.js (misalnya, `Tugas-11 - REST API Express/`, `Tugas-12 - CRUD Express Sequelize/`):**
 
-## Name
-Choose a self-explaining name for your project.
+1.  Masuk ke direktori proyek: `cd "Tugas-11 - REST API Express/"` (gunakan tanda kutip jika ada spasi)
+2.  Install dependencies: `npm install`
+3.  Jalankan aplikasi: `npm start` atau `node app.js` (atau sesuai dengan skrip di `package.json`)
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+**Untuk Proyek AdonisJS (misalnya, `Materi-13/test-13/`, `Quiz-3/quiz-3/`, `Tugas-13 - REST API Adonis/api-perpustakaan/`, `Final Project/final-project/`):**
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+1.  Masuk ke direktori proyek: `cd "Final Project/final-project/"` (gunakan tanda kutip jika ada spasi)
+2.  Install dependencies: `npm install`
+3.  Salin file environment: `cp .env.example .env`
+4.  Generate key aplikasi (jika belum ada di `.env`): `node ace generate:key`
+5.  Konfigurasi database Anda di file `.env`.
+6.  Jalankan migrasi (jika ada): `node ace migration:run`
+7.  Jalankan server development: `node ace serve --watch`
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+Selalu periksa file `package.json` di setiap direktori proyek untuk skrip spesifik dan dependensi yang dibutuhkan. Beberapa tugas mungkin hanya berupa file JavaScript tunggal yang bisa dijalankan langsung dengan `node nama_file.js`.
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+---
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Selamat menjelajahi dan semoga bermanfaat!
